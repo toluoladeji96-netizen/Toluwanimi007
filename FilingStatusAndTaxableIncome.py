@@ -1,4 +1,4 @@
-filing_status = int(input("enter filing status (0-single, 1-married joint, 2-married seperate, 3-head of household): "))
+filing_status = int(input("enter filing status (0-single, 1-married joint or  widow(er), 2-married seperate, 3-head of household): "))
 taxable_income = float(input("enter taxable income: "))
 
 tax = 0.0
@@ -20,7 +20,7 @@ if filing_status == 0: #single filing
         print('invalid input')
                        
 
-elif filing_status == 1: # married joint filing
+elif filing_status == 1: # married joint or widow(er) filing
     if taxable_income <= 16700:
         tax = taxable_income * 0.1
     elif taxable_income <= 67900:   
@@ -36,7 +36,7 @@ elif filing_status == 1: # married joint filing
     else:
         print('invalid input')
 
-elif filing_status == 2:
+elif filing_status == 2:      #married seperate filing 
     if taxable_income <= 8350:
         tax = taxable_income * 0.1
     elif taxable_income <= 33950:
@@ -52,7 +52,7 @@ elif filing_status == 2:
     else:
         print('invalid input')
 
-elif filing_status == 3: 
+elif filing_status == 3:   #Head of household
     if taxable_income <= 11950:
         tax =  taxable_income * 0.1
     elif taxable_income <= 45500:
@@ -72,5 +72,6 @@ else:
     exit()
     
 print(f'Total tax owed: ${tax:.2f}')
+
 
 
