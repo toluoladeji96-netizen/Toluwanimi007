@@ -20,7 +20,7 @@ if filing_status == 0: #single filing
         print('invalid input')
                        
 
-if filing_status == 1: # married joint filing
+elif filing_status == 1: # married joint filing
     if taxable_income <= 16700:
         tax = taxable_income * 0.1
     elif taxable_income <= 67900:   
@@ -36,7 +36,7 @@ if filing_status == 1: # married joint filing
     else:
         print('invalid input')
 
-if filing_status == 2:
+elif filing_status == 2:
     if taxable_income <= 8350:
         tax = taxable_income * 0.1
     elif taxable_income <= 33950:
@@ -52,7 +52,7 @@ if filing_status == 2:
     else:
         print('invalid input')
 
-if filing_status == 3: 
+elif filing_status == 3: 
     if taxable_income <= 11950:
         tax =  taxable_income * 0.1
     elif taxable_income <= 45500:
@@ -67,6 +67,10 @@ if filing_status == 3:
         tax = (((((11950 * 0.1) + ((45500 - 11950)*0.15)) + ((117450 - 45500)*0.25)) + ((190200 - 117450)*0.28)) + ((372950 - 190200)*0.33)) + ((taxable_income - 372950)*0.35)
     else:
         print('invalid input') 
-
+else:
+    print("Invalid filing status")
+    exit()
+    
 print(f'Total tax owed: ${tax:.2f}')
+
 
