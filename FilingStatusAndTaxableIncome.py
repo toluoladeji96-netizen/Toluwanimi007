@@ -70,7 +70,8 @@ while True:
             else:
                 tax = (11950 * 0.1) + ((45500 - 11950) * 0.15) + ((117450 - 45500) * 0.25) + ((190200 - 117450) * 0.28) + ((372950 - 190200) * 0.33) + ((taxable_income - 372950) * 0.35)
 
-        else:
+        if filing_status not in (0,1,2,3):
+
             print("Invalid filing status.")
             continue
 
@@ -79,6 +80,7 @@ while True:
 
     except ValueError:
         print("Invalid input. Please enter numbers only.")
+
 
 
 
