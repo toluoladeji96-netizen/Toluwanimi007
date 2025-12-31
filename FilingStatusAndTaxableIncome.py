@@ -76,10 +76,14 @@ while True:
             continue
 
         print(f"Total tax owed: ${tax:.2f}")
-        break  
+        again = input("Do you want to calculate another tax? (y/n): ").lower()
+        if again != 'y':
+            break
+        
 
     except ValueError:
         print("Invalid input. Please enter numbers only.")
+
 
 
 
